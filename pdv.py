@@ -5,7 +5,7 @@ while True:
     
     if Valor == 0:
         break
-=
+
     if Valor < 0:
          print("Valor invalido!!!")
          continue
