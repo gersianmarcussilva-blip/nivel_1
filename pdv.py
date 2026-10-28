@@ -10,11 +10,14 @@ while True:
          print("Valor invalido!!!")
          continue
     
-    Idade = int(input("Digite a idade do cliente: "))
-
-    if Idade < 0:
-         print("Idade invalido!!!")
-         continue
+    while True:
+        Idade = input("digite a idade do cliente: ")
+        if Idade.isnumeric():
+            Idade = int(Idade)
+            break
+        else:
+            print("Idade inválida!!!")
+            continue
 
     Final = Valor
 
