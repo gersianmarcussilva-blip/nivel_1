@@ -19,6 +19,7 @@ while True:
             print("Idade inválida!!!")
             continue
 
+
     Final = Valor
 
     if Idade >= 65:
@@ -47,3 +48,5 @@ print("Quantidade de compras:", len(Compras))
 print(f"Total bruto: R$ {Total:.2f}")
 print(f"Total de descontos: R$ {Descontos:.2f}")
 print(f"Total final: R$ {Final_dia:.2f}")
+
+print("\nCompras realizadas:")
