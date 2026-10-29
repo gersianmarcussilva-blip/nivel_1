@@ -1,4 +1,4 @@
-# A __PDV com Descontos__ 
+#  __PDV com Descontos__ 
 
 >__Sobre o projeto:__
 
@@ -28,7 +28,7 @@ _Esse projeto foi feito em Python e serve para simular um sistema de vendas. O p
 2. Abra o terminal na pasta onde o arquivo está.
 3. Digite o comando abaixo:
 
-'python pdv.py'
+"python pdv.py"
 
 4. Digite os valores das compras e as idades quando o programa pedir.
 5. Quando quiser terminar, digite "0" no valor da compra.
