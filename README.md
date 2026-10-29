@@ -1,52 +1,51 @@
-compras = []
+# A __PDV com Descontos__ 
 
-while True:
-    valor = float(input("Digite o valor da compra (0 para sair): R$ "))
+>__Sobre o projeto:__
 
-    if valor == 0:
-        break
+_Esse projeto foi feito em Python e serve para simular um sistema de vendas. O programa pede o valor da compra e a idade do cliente, depois calcula os descontos e mostra o valor final. Também é possível fazer várias compras e, no final, ver um resumo de todas elas._
 
-    if valor < 0:
-        print("Valor inválido! Digite novamente.")
-        continue
+>__Regras dos descontos:__
 
-    idade = int(input("Digite a idade do cliente: "))
+- Clientes com 65 anos ou mais recebem 20% de desconto.
+- Se o valor depois desse desconto ficar maior que R$ 100,00, recebe mais 10% de desconto.
+- Se o valor ficar em R$ 100,00 ou menos, não recebe o desconto extra.
+- Para encerrar o programa, basta digitar "0" no valor da compra.
 
-    if idade < 0:
-        print("Idade inválida! Vamos começar novamente.")
-        continue
+>__Como o código funciona__
 
-    valor_final = valor
-    desconto = 0
+1. Primeiro, o programa pede o valor da compra.
+2. Se o valor for "0", o programa para e mostra o resumo.
+3. Se o valor for negativo, aparece uma mensagem de erro.
+4. Depois, o programa pede a idade do cliente.
+5. Se o cliente tiver 65 anos ou mais, recebe 20% de desconto.
+6. Se o valor continuar maior que R$ 100,00, recebe mais 10% de desconto.
+7. O programa guarda os valores de cada compra em uma lista.
+8. No final, mostra a quantidade de compras, o total bruto, os descontos e o total final.
 
-    if idade >= 65:
-        valor_final = valor_final * 0.8
+>__Como executar__
 
-    if valor_final > 100:
-        valor_final = valor_final * 0.9
+1. Salve o código com o nome "pdv.py".
+2. Abra o terminal na pasta onde o arquivo está.
+3. Digite o comando abaixo:
 
-    desconto = valor - valor_final
+'python pdv.py'
 
-    compras.append({
-        "valor": valor,
-        "desconto": desconto,
-        "final": valor_final
-    })
+4. Digite os valores das compras e as idades quando o programa pedir.
+5. Quando quiser terminar, digite "0" no valor da compra.
 
-    print(f"Valor final: R$ {valor_final:.2f}")
+Exemplo
+Se um cliente de 65 anos fizer uma compra de R$ 200,00, o programa vai calcular os descontos assim:__
 
-print("\n--- RESUMO DO DIA ---")
+- Valor da compra: R$ 200,00.
+- Desconto de 20%: R$ 40,00.
+- Valor depois do primeiro desconto: R$ 160,00.
+- Desconto extra de 10%: R$ 16,00.
+- Valor final: R$ 144,00.
 
-total_bruto = 0
-total_descontos = 0
-total_final = 0
+Quando o programa terminar, ele mostra:
 
-for compra in compras:
-    total_bruto += compra["valor"]
-    total_descontos += compra["desconto"]
-    total_final += compra["final"]
+- Quantidade de compras realizadas.
+- Total bruto das compras.
+- Total de descontos.
+- Total final depois dos descontos.
 
-print(f"Quantidade de compras: {len(compras)}")
-print(f"Total bruto: R$ {total_bruto:.2f}")
-print(f"Total de descontos: R$ {total_descontos:.2f}")
-print(f"Total final: R$ {total_final:.2f}")
